@@ -1,0 +1,344 @@
+<div class="video-block">
+  <video autoplay loop width="100%" height="100%" #video>
+    <source src="assets/video/videoplayback.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="brief">
+  <p>我是來自高雄的前端工程師 王崇軒</p>
+  <h2>Welcome, I'm Evan!</h2>
+</div>
+<div #content>
+  <ul class="my-menu" #menu>
+    <li [ngClass]="{'active':item.active}" *ngFor="let item of menuArray;let index = index;" (click)="goMenu(index)">
+      {{ item.name }}
+    </li>
+  </ul>
+  <div class="hidden"></div>
+
+  <div class="fixed-bg about" #about>
+    <div class="container">
+      <div class="content">
+        <h2 class="title">
+          ABOUT ME
+        </h2>
+        <div class="box">
+          <div class="me">
+            <img src="assets/images/1.jpg" alt="">
+          </div>
+          <div class="introduction">
+            <h4 class="name">Evan Wang 王崇軒</h4>
+            <h3 class="rank">Tech Lead</h3>
+            <p>
+              嗨！我是 Evan 王崇軒，是一位熱愛學習的工程師，個性和善、積極，對於事物有所自己的堅持，想要出自我手的東西是最好的。
+            </p>
+            <br>
+            <p>
+              曾經擔任過前端工程師 & 後端工程師至專案技術領導 Tech Lead，帶領團隊跨部門合作開發以及導入新技術以及上雲。
+            </p>
+            <br>
+            <p>
+              擅長敏捷開發流程，具備有 Scrum Master 證照
+            </p>
+          </div>
+        </div>
+        <ul class="sub-item">
+          <li>
+            <span class="icon-location"></span>
+            <span>
+              高雄市，台灣
+            </span>
+          </li>
+          <li>
+            <span class="icon-mail2"></span>
+            <a href="mailto:kevinwang6303@gmail.com">kevinwang6303@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon-github"></span>
+            <a href="https://github.com/kevinwang6303" target="_blank">
+              https://github.com/kevinwang6303
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-bg experience" #experience>
+    <div class="container">
+      <div class="content">
+        <h2 class="title">
+          EXPERIENCE
+        </h2>
+        <div class="box">
+          <section>
+            <h4>學經歷</h4>
+            <div class="education">
+              <div class="line">
+                <div></div>
+                <span class="year">
+                  <span>{{ toDay | date:'yyyy-MM' }}</span>
+                </span>
+                <div></div>
+              </div>
+              <div class="description">
+                <h3>Tech Lead</h3>
+                <ul>
+                  <li>
+                    帶領團隊完成目標，專案成員學習以及培訓
+                  </li>
+                  <li>
+                    負責基礎架構建設以及導入新技術進入專案內
+                  </li>
+                  <li>
+                    向上管理協助團隊取得資源及支援
+                  </li>
+                </ul>
+                <span class="icon icon-user"></span>
+              </div>
+            </div>
+            <div class="education">
+              <div class="line">
+                <div></div>
+                <span class="year">
+                  <span>2018-11</span>
+                </span>
+                <div></div>
+              </div>
+              <div class="description">
+                <h3>Wistron Corporation</h3>
+                <ul>
+                  <li>
+                    負責前端 & 後端開發
+                  </li>
+                  <li>
+                    專案使用azure服務 (power automate)
+                  </li>
+                </ul>
+                <span class="icon icon-briefcase"></span>
+              </div>
+            </div>
+            <div class="education">
+              <div class="line">
+                <div></div>
+                <span class="year">
+                  <span>2015-11</span>
+                </span>
+                <div></div>
+              </div>
+              <div class="description">
+                <h3>哈瑪星科技</h3>
+                <ul>
+                  <li>
+                    HTML5電子書
+                  </li>
+                  <li>
+                    企業輔銷系統
+                  </li>
+                  <li>
+                    單間智慧教室
+                  </li>
+                  <li>
+                    CIRN─國民中小學課程與教學資源整合平臺
+                  </li>
+                  <li>
+                    2017臺北世大運官方首頁
+                  </li>
+                  <li>
+                    臺北市政府電子公報資訊網
+                  </li>
+                  <li>
+                    富邦影書城平台
+                  </li>
+                  <li>
+                    香港匯知教育出版社教學平台
+                  </li>
+                </ul>
+                <span class="icon icon-briefcase"></span>
+              </div>
+            </div>
+            <div class="education">
+              <div class="line">
+                <div></div>
+                <span class="year">
+                  <span>2015-06</span>
+                </span>
+                <div></div>
+              </div>
+              <div class="description">
+                <h3>國立高雄應用科技大學(現今國立高雄科大) - 電機所畢</h3>
+                <ul>
+                  <li>
+                    台灣電力公司 - 智慧電表統計網站
+                  </li>
+                </ul>
+                <span class="icon icon-library"></span>
+              </div>
+            </div>
+          </section>
+          <div class="indent">
+            <h2>作品簡介</h2>
+            <ul>
+              <li>
+                <h3>數位轉型專案 Design Debug Efficient (DDE)</h3>
+                <p>
+                  Design Debug Efficient，改善電路設計品質與效率，減少反覆除錯時間。目前小團隊專案人數約為 5 人，總專案大概為10人，我在專案內擔任 Tech Lead，負責帶領團隊成員開發專案。
+                </p>
+                <p>
+                  效益: 成功在每個 Sprint 交付軟體，與 Project Owner 共同為公司節省 500萬開支，跨開發團隊與各上雲計畫小組協同，為組織節省每月上雲費用 30%。
+                </p>
+                <p>
+                  從前端轉戰後端是一大挑戰，包括框架上(Node)的熟悉，資料的規劃，以及Infra都是所需要著手去處理的，因為熟悉前端，會知道前端所需API格式以及需求，可以快速產出API．使用到了前端不會操作到的資料庫PostgreSQL，以及資料設計上的正規化，資料處理上也運用了Nifi以及Kubernetes一些服務來減少開發端的負擔，包括切分micro-service以及運用cicd自動化來減少重複性的工作。
+                </p>
+                <p>
+                  工作模式上也由主管瀑布式的需求轉變為敏捷開發，與小組配合以及PO的溝通是一大轉變，也因應敏捷是很重要的趨勢，所以考取了Scrum Master證照。
+                </p>
+              </li>
+              <li>
+                <h3>HTML5電子書</h3>
+                <p>
+                  電子書中有許多互動功能可由編輯器端製作，產生電子書，內容包括物件的塗抹(類似刮刮樂)、360度物件旋轉、相似於PPT動畫的飛入飛出、彈出視窗顯示資訊等等許多功能，我所負責的內容是電子書在瀏覽器上呈現的部分。
+                </p>
+                <p>
+                  在這產品上開發了動畫、圖⽚平移、彈出視窗、⼯具列的選單、物件旋轉等等許多功能，使⽤JQ的Draggable、css的旋轉來製作功能，但是因為整份電子書是由編輯器端產出，再利用前端技術去做到互動行為，導致有些需要修改到編輯器端產出的程式碼會變得繁瑣，維護上有困難度，javascirpt的部分也沒有依照功能來做程式碼的分類，所以思考如何改善以及增加維護品質，編輯器端僅提供資料，其他呈現及處理完全由前端負責。
+                </p>
+                <p>
+                  得到主管同意後，與另⼀名同仁進⾏重構以及重寫，規劃功能進⾏包裝，內容包括了呈現的內容繪製上canvas、功能所需的元素以及格式轉換等等，把元素及功能整理成每⼀⾴所需要的資料格式，把功能在canvas上來呈現。
+                </p>
+                <p>
+                  不過在解析功能的時候也判斷⾏為是否操作DOM，是的話使⽤css or js動畫，如果是呈現動圖的功能，就會利⽤canvas來處理，使⽤不⼀樣的⽅式處理不同的功能模組。
+                </p>
+              </li>
+              <li>
+                <h3>2017臺北世大運官方首頁</h3>
+                <p>
+                  此專案是在公司與他人合作的第一個專案，內容一樣是以AngularJs加上.Net
+                  WebForm去做開發，我負責的工作屬於前端(AngularJS)開發的部分，會與設計師討論畫面如何套版以及增加動畫呈現、製作伸縮menu、圖片大小校正(固定範圍內，圖片長邊頂到為大小依據))等等功能，與後端工程師依據畫面上功能面所需資料去溝通跟定義傳輸的JSON格式、資料模型的產出。
+                </p>
+              </li>
+              <li>
+                <h3>臺北市政府電子公報資訊網、富邦影書城平台、香港匯知教育出版社教學平台</h3>
+                <p>
+                  這幾個專案是我向主管提議能否用Angular 4 + .Net Core
+                  WebAPi的方式進行開發，會想轉換的原因是因為以webform為底的站台，在路由轉換都會postback，造成不好的使用者體驗以及效能上不好，所以建議使用有完整框架，SPA的Angular來達成路由切換、前端的呈現。
+                </p>
+                <p>
+                  在前端的部分實現了依據功能設計路由、建構整個站台的網站地圖，建置整個專案架構，抽取前端共用元件，包括了彈出式視窗、分頁元件、大幅輪播、上傳的service等等元件。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-bg skills" #skills>
+    <div class="container">
+      <div class="content">
+        <h2 class="title">
+          SKILLS
+        </h2>
+        <div class="item-block">
+          <div class="skill-item">
+            <h3>前端</h3>
+            <div>
+              <ul>
+                <li>
+                  HTML5/CSS
+                </li>
+                <li>
+                  Javascript
+                </li>
+                <li>
+                  jQuery
+                </li>
+                <li>
+                  Typescript
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div>
+              <h3>後端</h3>
+              <ul>
+                <li>
+                  Node
+                </li>
+                <li>
+                  MS-SQL
+                </li>
+
+                <li>
+                  PostgreSQL
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <h3>Other</h3>
+            <ul>
+              <li>AngularJs</li>
+              <li>Angular</li>
+              <li>React</li>
+              <li>Express</li>
+              <li>Cross Functional Communications</li>
+              <li>Kubernetes</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-bg trait indent" #trait>
+    <div class="container">
+      <div class="content">
+        <div class="box">
+          <h2 class="title">
+            TRAIT
+          </h2>
+          <div>
+            <ul>
+              <li>
+                <h3>注重團隊溝通與合作</h3>
+                <p class="margin-0">
+                  對於一個團隊的進行，溝通是非常重要的，當然溝通並不是盲目的，以現階段個人在開發專案與團隊討論來說有以下
+                </p>
+                <ul class="t-description list-block">
+                  <li>
+                    明確的需求，確認團隊內所有人都了解需求以及功能，在Planning時由RD們說故事需求給PO聽，進而了解是否有遺漏或者需要變更的地方。
+                  </li>
+                  <li>
+                    快速理解功能需求、提供前端共用元件設計意見給此專案所需．協助前後端複雜格式梳理，幫助後端規劃複雜功能資料表，可以加速團隊開發。
+                    在開發上可參考畫面或者功能性討論出需要的格式，同步進行開發，後端可先好寫一個功能的CRUD，再補上該功能所需要特別的API，來開發完整的功能。
+                  </li>
+                  <li>
+                    與別系統在介接時，會先研究使用工作或者方法是否能串通，釐清問題以及可行性，減少sprint內研究時間導致於時間浪費掉。
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>喜歡新鮮事物</h3>
+                <p class="margin-0">
+                  資訊爆炸的時代，隨時關注熱門以及感興趣事物，讓自我能力不落人後，不管前端或者後端，需要學習的太多，但擔任TL發現不應該都執著於技術上的進步，Infra的操作以及了解也是非常重要的。
+                  包括資料並不是只有程式碼的開發才能處理，微軟的服務也逐漸走向不需要程式碼的幫助就能做到需要的功能，上雲後的主流，以及Kubernetes這些都是現在需要更去深入了解的，而不是技術上的追求。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-bg trait">
+    <div class="container">
+      <div class="content">
+        <div class="back" (click)="goTop()">
+          <div>
+            <span class="icon-arrow-up"></span>
+          </div>
+          <a class="back-text">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="menu" (click)="menuOpen = !menuOpen">
+    <div class="menu-text">
+      Menu
+    </div>
+    <div class="burger">
+      <span [ngClass]="{ 'cross':menuOpen,'active':!menuOpen  }"></span>
+      <span [ngClass]="{ 'cross':menuOpen,'active':!menuOpen  }"></span>
+      <span [ngClass]="{ 'cross':menuOpen,'active':!menuOpen  }"></span>
+    </div>
+  </div>
+  <div class="other-menu" @flyInOut *ngIf="menuOpen">
+    <ul>
+      <li class="other-menu-item">
+        <h3>Home</h3>
+      </li>
+      <li class="other-menu-item">
+        <h3>Blog</h3>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
